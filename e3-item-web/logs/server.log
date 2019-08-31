@@ -1,0 +1,647 @@
+
+
+[ERROR] 2019-04-28 20:44:21,741 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:502)
+Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.controller.ItemController.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-item-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=12920&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556455459995 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.controller.ItemController.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-item-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=12920&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556455459995 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 29 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-item-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=12920&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556455459995 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 31 more
+Caused by: java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-item-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=12920&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556455459995 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:420)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138)
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:65)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168)
+	... 39 more
+
+
+[ERROR] 2019-04-28 20:51:22,039 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:502)
+Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.controller.ItemController.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-item-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=12920&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556455881968 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.controller.ItemController.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-item-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=12920&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556455881968 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 34 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-item-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=12920&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556455881968 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 36 more
+Caused by: java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-item-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=12920&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556455881968 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:420)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138)
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:65)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168)
+	... 44 more
+
+
+[ERROR] 2019-05-01 00:46:53,638 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:00,919 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:06,931 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:12,939 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=3, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:18,951 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=4, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:24,961 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=5, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:30,974 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=6, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:36,981 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=7, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:42,996 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=8, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:49,002 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=9, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:47:55,010 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=10, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:01,017 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=11, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:07,021 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=12, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:13,031 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=13, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:19,042 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=14, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:25,050 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=15, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:31,057 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=16, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:37,069 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=17, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:43,103 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=18, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:49,109 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=19, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:48:55,113 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=20, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:01,125 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=21, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:07,129 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=22, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:13,143 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=23, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:19,150 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=24, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:25,159 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=25, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:31,165 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=26, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:37,171 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=27, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:43,179 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=28, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:49,190 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=29, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:49:55,198 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=30, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:01,203 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=31, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:07,212 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=32, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:13,226 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=33, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:19,235 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=34, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:25,246 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=35, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:31,256 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=36, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:37,264 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=37, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:43,275 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=38, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:49,284 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=39, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:50:55,297 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=40, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:01,313 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=41, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:07,322 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=42, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:13,332 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=43, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:19,343 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=44, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:25,364 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=45, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:31,374 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=46, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:37,384 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=47, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:43,392 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=48, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:49,400 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=49, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:51:55,409 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=50, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:01,440 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=51, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:07,451 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=52, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:13,462 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=53, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:19,471 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=54, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:25,484 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=55, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:31,494 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=56, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:37,508 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=57, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:43,518 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=58, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:49,543 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=59, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:52:55,552 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=60, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:01,561 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=61, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:07,574 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=62, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:13,582 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=63, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:19,595 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=64, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:25,604 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=65, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:31,615 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=66, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:37,625 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=67, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:43,633 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=68, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:49,647 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=69, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:53:55,655 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=70, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:54:01,669 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=71, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:54:07,679 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=72, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:54:13,695 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=73, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:54:19,704 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=74, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:54:25,708 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=75, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:54:31,717 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=76, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:54:37,725 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=77, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:54:43,729 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=78, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:56:04,883 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:56:10,895 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:56:16,901 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:56:22,909 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=3, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:56:28,917 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=4, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:56:34,927 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=5, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:56:40,931 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=6, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:56:46,937 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=7, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-01 00:56:52,948 method:org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:937)
+Could not refresh JMS Connection for destination 'topic://itemAddTopic' - retrying using FixedBackOff{interval=5000, currentAttempts=8, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.25.128:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+
+[ERROR] 2019-05-03 00:49:02,339 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:502)
+Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'htmlGenListener': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.listener.HtmlGenListener.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=15564&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556815741968 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.listener.HtmlGenListener.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=15564&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556815741968 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 29 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=15564&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556815741968 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 31 more
+Caused by: java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=15564&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556815741968 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:420)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138)
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:65)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168)
+	... 39 more
+
+
+[ERROR] 2019-05-03 00:50:31,935 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:502)
+Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'htmlGenListener': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.listener.HtmlGenListener.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,loadItemDesc,getItemCid,delete,getItemParamData,loadItem,addItem,instock,getItemById&pid=9356&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556815831595 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.listener.HtmlGenListener.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,loadItemDesc,getItemCid,delete,getItemParamData,loadItem,addItem,instock,getItemById&pid=9356&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556815831595 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 29 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,loadItemDesc,getItemCid,delete,getItemParamData,loadItem,addItem,instock,getItemById&pid=9356&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556815831595 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 31 more
+Caused by: java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,loadItemDesc,getItemCid,delete,getItemParamData,loadItem,addItem,instock,getItemById&pid=9356&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556815831595 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:420)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138)
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:65)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168)
+	... 39 more
+
+
+[ERROR] 2019-05-04 23:29:43,431 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:502)
+Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'htmlGenListener': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.listener.HtmlGenListener.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=20292&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556983783173 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.service.ItemService cn.e3mall.item.listener.HtmlGenListener.itemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=20292&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556983783173 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 29 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=20292&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556983783173 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 31 more
+Caused by: java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.service.ItemService. No provider available for the service cn.e3mall.service.ItemService from the url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-cart-web&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=reshelf,update,getItemList,getItemCid,loadItemDesc,delete,getItemParamData,loadItem,instock,addItem,getItemById&pid=20292&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1556983783173 to the consumer 192.168.25.1 use dubbo version 2.5.3
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:420)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138)
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:65)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168)
+	... 39 more
